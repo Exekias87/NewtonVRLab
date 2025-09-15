@@ -31,3 +31,14 @@ Il progetto è open source ed è stato sviluppato per essere utilizzato, modific
 1. Scarica o clona questo repository:
    ```bash
    git clone https://github.com/Exekias87/NewtonVRLab.git
+2. Apri Unity Hub.
+
+3. Seleziona "Add project from disk" e scegli la cartella scaricata.
+4. Usa la versione di Unity 2023.3.x (o superiore compatibile).
+
+### Per creare una build giocabile
+
+1. Vai su File > Build Settings.
+2. Seleziona la piattaforma desiderata (es. Windows, WebGL).
+3. Premi Build.
+4. Per la versione VR assicurati di avere installato il supporto OpenXR Plugin.
