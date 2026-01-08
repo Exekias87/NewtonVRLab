@@ -25,6 +25,8 @@ public class NewtonExperiment : MonoBehaviour
         oggetto.mass = massa;
         posizioneIniziale = oggetto.transform.position;
         forzaApplicata = false;
+
+        oggetto.linearDamping = 0.2f;  // 👈 coefficiente di attrito lineare
     }
 
    // Imposta la forza dallo slider
