@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ba0746d3aabd3c34cba29d24fdd84504
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sphereRigidbody: {instanceID: 0}
+  - planeMaterial: {fileID: 13400000, guid: 7b023ba9d318ea24baf2f3e75b8d0785, type: 2}
+  - startPosition: {instanceID: 0}
+  - massSlider: {instanceID: 0}
+  - frictionSlider: {instanceID: 0}
+  - massOutput: {instanceID: 0}
+  - frictionOutput: {instanceID: 0}
+  - timerOutput: {instanceID: 0}
+  - startButton: {instanceID: 0}
+  - resetButton: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

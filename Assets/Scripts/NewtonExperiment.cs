@@ -3,11 +3,12 @@ using TMPro;
 
 public class NewtonExperiment : MonoBehaviour
 {
+    public float tempoApplicazioneForza = 1f;
     public Rigidbody oggetto;         
     public float forza = 10f;         
     public float massa = 1f;          
     public Vector3 direzione = new Vector3(0, 0, 1); 
-    public TextMeshProUGUI outputAccelerazione;
+    public TextMeshProUGUI outputVelocita;
     public TextMeshProUGUI indicatoreMassa;
     public TextMeshProUGUI indicatoreForza;
     public LineRenderer frecciaForza;
@@ -73,12 +74,15 @@ public class NewtonExperiment : MonoBehaviour
                 frecciaForza.enabled = true;
             }
 
-            // Calcola accelerazione
-            float accelerazione = forza / massa;
-            if (outputAccelerazione != null)
-                outputAccelerazione.text = $"a = {accelerazione:F2} m/s²";
+            // Calcolo accelerazione (interno)
+	    float accelerazione = forza / massa;
 
-            forzaApplicata = true;
+	   // Calcolo velocità iniziale
+	   float velocitaIniziale = accelerazione * tempoApplicazioneForza;
+
+	   if (outputVelocita != null)
+	   outputVelocita.text = $"v₀ = {velocitaIniziale:F2} m/s";
+
         }
     }
 
@@ -90,10 +94,10 @@ public class NewtonExperiment : MonoBehaviour
         oggetto.transform.position = posizioneIniziale;
         forzaApplicata = false;
 
-        if (outputAccelerazione != null)
-            outputAccelerazione.text = "a = 0.00 m/s²";
+       if (outputVelocita != null)
+       outputVelocita.text = "v₀ = 0.00 m/s";
 
-        if (frecciaForza != null)
+       if (frecciaForza != null)
             frecciaForza.enabled = false;
     }
 }
